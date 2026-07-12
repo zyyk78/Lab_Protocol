@@ -1,0 +1,12 @@
+# 白名单：只保留 markdown 文档与图片，其余全忽略
+*
+!*/
+
+# 放行
+!*.md
+!pictures/
+!pictures/**
+!.gitignore
+
+# 明确排除 macOS 元数据
+._*
