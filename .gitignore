@@ -4,9 +4,12 @@
 
 # 放行
 !*.md
+!*.yml
 !pictures/
 !pictures/**
 !.gitignore
+!.github/
+!.github/**
 
 # 明确排除 macOS 元数据
 ._*

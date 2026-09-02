@@ -1,0 +1,40 @@
+site_name: 实验室 Wiki
+
+# 当前仓库结构：所有 md 都在仓库根目录，没有 docs/ 子目录
+docs_dir: .
+site_dir: site
+
+site_url: https://zyyk78.github.io/Lab_Protocol/
+repo_url: https://github.com/zyyk78/Lab_Protocol
+repo_name: zyyk78/Lab_Protocol
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 首页: index.md
+
+  - 实验指南:
+      - 动物实验指南: 动物实验指南.md
+      - 软件使用指南: 软件使用指南.md
+      - 硬件加工指南: 硬件加工指南.md
+      - 设备使用指南: 设备使用指南.md
+      - 服务器使用指南: 服务器使用指南.md
+      - 服务器维护指南: 服务器维护指南.md
+      - 重要工程项目: 重要工程项目.md
+      - 文档撰写规范: 文档撰写规范.md
