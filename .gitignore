@@ -5,6 +5,7 @@
 # 放行
 !*.md
 !*.yml
+!*.txt
 !pictures/
 !pictures/**
 !.gitignore
