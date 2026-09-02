@@ -6,6 +6,8 @@
 !*.md
 !*.yml
 !*.txt
+!*.html
+!.nojekyll
 !pictures/
 !pictures/**
 !.gitignore

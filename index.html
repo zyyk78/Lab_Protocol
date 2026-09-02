@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>实验室 Wiki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="实验室知识库 Wiki">
+  <link rel="icon" href="pictures/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+      /* 让中文长标题在 sidebar 中不被裁太狠 */
+      .sidebar-nav > ul > li > a { font-weight: 600; }
+      .sidebar-nav > ul > li > ul > li > a { font-weight: 400; }
+    </style>
+</head>
+<body>
+  <div id="app">加载中…...</div>
+  <script>
+    window.$docsify = {
+      name: '实验室 Wiki',
+      repo: 'https://github.com/zyyk78/Lab_Protocol',
+
+      // 让 / 默认指向 index.md（不是 README.md）
+      homepage: 'index.md',
+
+      // 侧边栏导航（对应 _sidebar.md）
+      loadSidebar: '_sidebar.md',
+
+      // 跨文档链接：保持原文件名路径，不要走 docsify 的 /path 重写
+      // 否则 [动物实验指南](动物实验指南.md) 会变成 [动物实验指南](/动物实验指南)
+      relativePath: true,
+
+      // 自动识别 md 链接，由 docsify 路由器处理（实现 SPA 式跨文档跳转）
+      // 这是默认行为，显式声明以便排查
+      routerMode: 'hash',
+
+      // 搜索（自带插件，中文按字符切分）
+      search: {
+        paths: 'auto',
+        placeholder: '搜索文档…',
+        noData: '没有匹配结果',
+        depth: 6,
+      },
+
+      // 复制代码按钮
+      copyCode: {
+        buttonText: '复制',
+        errorText: '复制失败',
+        successText: '已复制',
+      },
+
+      // 标题里 # 后跟 slug（互链到本文件锚点时复制链接更友好）
+      slugify: {
+        separator: '-',
+        unicode: true,
+      },
+
+      // 大纲深度（页面右侧 TOC 显示到 h2）
+      subMaxLevel: 3,
+    };
+  </script>
+  <!-- docsify 核心 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 搜索插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+</body>
+</html>
