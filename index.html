@@ -8,9 +8,35 @@
   <link rel="icon" href="pictures/favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
-      /* 让中文长标题在 sidebar 中不被裁太狠 */
+      /* sidebar 中文标题不被裁太狠 */
       .sidebar-nav > ul > li > a { font-weight: 600; }
       .sidebar-nav > ul > li > ul > li > a { font-weight: 400; }
+
+      /* ===========================================
+       * 图片统一样式（详见文档撰写规范第 4 节）
+       * ===========================================
+       * 默认：图片不超出正文容器宽度，居中显示，上下留白
+       * 临时大图：在 md 中加 ![alt](path){.full} 即可突破
+       */
+      .markdown-section img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1.5em auto;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+      /* 给"大图"标记的图片放行（不被 100% 约束） */
+      .markdown-section img.full {
+        max-width: none;
+        width: 100%;
+      }
+
+      /* 图片前后段落间距 */
+      .markdown-section p:has(img) {
+        margin: 0;
+      }
     </style>
 </head>
 <body>
